@@ -1,0 +1,49 @@
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from '@/lib/prisma'
+
+
+export async function POST(req: NextRequest){
+    try {
+        console.log("API HIT ✅");
+        const body = await req.json();
+        const {title, date, content} = body;
+        if(!title || !date || !content){
+            return NextResponse.json({error: "All fields are required"}, {status: 400});
+        }
+
+        // Add blog to the database
+        const parsedDate = new Date(`${date}T00:00:00.000Z`);
+    if (isNaN(parsedDate.getTime())) {
+      return NextResponse.json({ error: "Invalid date" }, { status: 400 });
+    }
+
+    const blog = await prisma.blog.create({
+      data: { title, content, date: parsedDate },
+    });
+
+        // Log the added blog
+        console.log("Blog added:", blog);
+        
+        console.log("Blog added:", {title, date, content});
+        return NextResponse.json({message: "Blog added successfully"}, {status: 200});
+    }
+    catch(error){
+        console.log("Error adding blog", error);
+        return NextResponse.json({error: "Failed to add blog"}, {status: 500});
+    }
+}
+
+export async function GET(){
+    try {
+        const blogs = await prisma.blog.findMany({
+            orderBy: {
+                date: 'desc',
+            }
+
+        });
+        return NextResponse.json(blogs, {status:200})
+    } catch (error) {
+        console.log("Error fetching blogs", error);
+        return NextResponse.json({error: "Failed to fetch blogs"}, {status: 500});
+    }
+}
