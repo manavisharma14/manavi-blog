@@ -4,7 +4,7 @@ import { Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Blog = {
-    id: string;          // or _id: string, depending on your API
+    id: string;         // 
     title: string;
     content: string;
     date: string;        // ISO string from API
