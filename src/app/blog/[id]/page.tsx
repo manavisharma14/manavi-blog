@@ -44,7 +44,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
   </div>
 ) : (
   <div className="bg-gray-200 w-full aspect-video mb-8 flex items-center justify-center text-sm text-gray-500 rounded">
-    No image
+    No imagee
   </div>
 )}
 
