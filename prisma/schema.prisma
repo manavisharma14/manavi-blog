@@ -20,4 +20,6 @@ model Blog {
   content   String
   date      DateTime
   createdAt DateTime @default(now())
+  imageUrl  String?  // Optional image URL
+  tags      String[] // Optional tags array
 }

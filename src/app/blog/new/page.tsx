@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 export default function NewBlogPage() {
 
-    const [form, setForm] = useState({title: '', date: '', content: ''})
+    const [form, setForm] = useState({title: '', content: '', imageUrl: ''});
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -46,7 +46,7 @@ export default function NewBlogPage() {
             if(response.ok){
                 const data = await response.json();
                 console.log('Blog added successfully:', data);
-                setForm({title: '', date: '', content: ''});
+                setForm({title: '', content: '', imageUrl: ''});
             }
 
             if(!response.ok){
@@ -71,14 +71,7 @@ export default function NewBlogPage() {
                     className="w-full mb-4 border px-4 py-5 mb-5 rounded"
                 />
 
-                <Input
-                    name="date"
-                    type="text"
-                    placeholder="Blog Data"
-                    value={form.date}
-                    onChange={handleChange}
-                    className="w-full mb-4 border px-4 py-5 mb-5 rounded"
-                />
+
 
                 <Textarea
                     name="content"
@@ -87,6 +80,15 @@ export default function NewBlogPage() {
                     onChange={handleChange}
                     className="w-full mb-4 border px-4 py-5 mb-5 rounded"
                 />
+
+<Input
+  type="text"
+  placeholder="Image URL"
+  name="imageUrl"
+  value={form.imageUrl}
+  onChange={handleChange}
+  className="w-full max-w-md mb-4 border px-4 py-3 rounded"
+/>
 
                 <Button 
                     type="submit"

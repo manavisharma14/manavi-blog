@@ -6,25 +6,22 @@ export async function POST(req: NextRequest){
     try {
         console.log("API HIT ✅");
         const body = await req.json();
-        const {title, date, content} = body;
-        if(!title || !date || !content){
+        const {title, content, imageUrl} = body;
+        if(!title || !content || !imageUrl){
             return NextResponse.json({error: "All fields are required"}, {status: 400});
         }
 
         // Add blog to the database
-        const parsedDate = new Date(`${date}T00:00:00.000Z`);
-    if (isNaN(parsedDate.getTime())) {
-      return NextResponse.json({ error: "Invalid date" }, { status: 400 });
-    }
+
 
     const blog = await prisma.blog.create({
-      data: { title, content, date: parsedDate },
+      data: { title, content, imageUrl, date: new Date()  },
     });
 
         // Log the added blog
         console.log("Blog added:", blog);
         
-        console.log("Blog added:", {title, date, content});
+        console.log("Blog added:", {title, content, imageUrl});
         return NextResponse.json({message: "Blog added successfully"}, {status: 200});
     }
     catch(error){
