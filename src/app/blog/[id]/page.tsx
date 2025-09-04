@@ -47,7 +47,6 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
     No imagee
   </div>
 )}
-
       <div className="prose prose-lg max-w-none">
       <p className="whitespace-pre-line">{blog.content}</p>
       </div>

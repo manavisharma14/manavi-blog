@@ -78,7 +78,7 @@ export default function NewBlogPage() {
                     placeholder="Blog Content"
                     value={form.content}
                     onChange={handleChange}
-                    className="w-full mb-4 border px-4 py-5 mb-5 rounded"
+                    className="w-full mb-4 border h-64 px-4 py-5 mb-5 rounded"
                 />
 
 <Input
