@@ -34,9 +34,16 @@ export default function Home() {
       
       <div className="flex flex-col gap-10 items-center max-w-3xl bg-purple-50 ">
         <h1 className="mt-8 text-4xl font-extrabold">About Me</h1>
-        <p className="m-8 justify-center text-justify">Hey, I am Manavi Sharma — a curious human who finds joy in building things, writing honestly, and chasing ideas that matter. I am always learning, always creating — sometimes through code, sometimes through words, sometimes just through observation.
-          This blog is where I reflect, ramble, and record moments that shape me. Its part journal, part thought-dump, part quiet rebellion against the pressure to always have it figured out. You will find stories, lessons, half-formed thoughts, and maybe a little clarity along the way.
-          Thanks for stopping by — stay as long as you like 🌻</p>
+        <p className="m-8 justify-center text-justify">
+
+
+Hey! I’m Manavi Sharma, a curious human who finds joy in building things, writing and pursuing ideas that matter. I’m constantly learning, constantly creating, sometimes through code, sometimes through the lens of words, sometimes just through observation. 
+
+
+This blog is where I reflect, ramble and capture my experiences while they shape me. It’s part diary / journal, part brain dumps, part gentle rebellion against the pressure to always have everything figured out. You'll find stories, lessons, half-baked ideas, and possibly find a little bit of clarity.
+
+
+Thanks for stopping by, stay as long as you like 🌻</p>
       </div>
     </div>
     <div>
