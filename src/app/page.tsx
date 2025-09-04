@@ -23,7 +23,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 items-center text-center lg:text-left max-w-3xl bg-purple-50 p-6 rounded shadow">
           <h1 className="text-4xl font-extrabold mt-2">About Me</h1>
           <p className="text-base sm:text-lg text-gray-700 text-justify">
-            Hey! I’m Manavi Sharma, a curious human who finds joy in building things, writing and pursuing ideas that matter. I’m constantly learning, constantly creating, sometimes through code, sometimes through the lens of words, sometimes just through observation.  
+            Hey! I’m Manavi Sharma, a curious human who finds joy in building things, pursuing ideas that matter. I’m constantly learning, constantly creating, sometimes through code, sometimes through the lens of words, sometimes just through observation.  
             <br /><br />
             This blog is where I reflect, ramble, and capture my experiences while they shape me. It’s part diary, part brain dump, part gentle rebellion against the pressure to always have everything figured out. You’ll find stories, lessons, half-baked ideas, and maybe a little clarity.
             <br /><br />

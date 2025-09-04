@@ -43,7 +43,7 @@ export default function BlogList() {
 
   return (
     <div className='p-6 sm:p-10'>
-      <h1 className="text-center font-bold text-3xl mb-10">Blog List</h1>
+      {/* <h1 className="text-center font-bold text-3xl mb-10">Blog List</h1> */}
       <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
         {blogs.map((blog, index) => {
           const bgColor = pastelColors[index % pastelColors.length];
