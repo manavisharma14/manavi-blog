@@ -49,7 +49,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
 )}
 
       <div className="prose prose-lg max-w-none">
-        <p>{blog.content}</p>
+      <p className="whitespace-pre-line">{blog.content}</p>
       </div>
     </div>
   );
